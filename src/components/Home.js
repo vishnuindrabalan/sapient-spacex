@@ -2,19 +2,31 @@ import React, { useState } from 'react';
 
 import { api } from '../api';
 import { useServerData } from '../state/serverDataContext';
+import Button from '@material-ui/core/Button';
 
-const Home = () => {
+const Home = props => {
   const serverTodos = useServerData(data => {
     return data.todos || [];
   });
   const [text, setText] = useState('');
   const [todos, setTodos] = useState(serverTodos);
 
+  const buttonClick = () => {
+    props.history.push({
+      pathname: '/',
+      search: '?query=abc',
+      state: { detail: 'some_value' }
+    });
+  };
+
   return (
     <div>
+      <Button variant="contained" onClick={buttonClick}>
+        sdssddsdsd
+      </Button>
       <h1>Home page</h1>
 
-      <form
+      {/* <form
         onSubmit={e => {
           e.preventDefault();
 
@@ -37,11 +49,11 @@ const Home = () => {
           autoComplete="off"
           onChange={e => setText(e.target.value)}
         />
-      </form>
+      </form> */}
 
       <ul>
         {todos.map(todo => (
-          <li key={todo.id}>{todo.text}</li>
+          <li key={todo.id}>{todo.flight_number}</li>
         ))}
       </ul>
     </div>
