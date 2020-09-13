@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - '12'
+script:
+  - npm test
+  - npm run build
+deploy:
+  provider: heroku
+  app: vishnu-sapient-spacex
+  api_key:
+    secure: UAlTcCP9Q+xifg5xh7ENwRSxHB7RVTDM+dj2T1X2L1hDq3ZvH26Ie0mnAUOqD4L0Xme5DIdDRA7tzXKsjdeqH/hSa3BBHE9yEEJwssKPV7kZK8yMZTY7jrbtdbpWy3RaevEG5sYWSkPikFnmXctT6kqBYw6fJ5abJ1787kRidRCKIkK78Z77luBDtkHsbQTJ1hefYdwsnS+pyp1Y0j+x4FyiMDNysTKlT7TSY2Cep96Kw67UWJBXXM6Is+hj9u1zkKW5m1qnhVwl0xK2Ie7+l1UR67ypbu4yJneVK7eT+tuHfk6Ma7H8JKcFHYvA56UwC9W8yhd34TXy3MDaCfmQ7rJbkh+yDUGdt5TImxMFfxaqjH8GQZLd3Qs2vZ8pEFmWUcvbJLAk376Y271gcWvaIHJouZsBvV8q00tZJL+xApdYQm4WyOrlNK9VWALUs5XLD1a/G0qav0aocXv2Z62I/vQQ8Z84ZmXnzCjfmtykwby3Ep/Lq7ME5G/57CxBemSlkC175taXSJKt0z+8CDVRQby/tGecViGONfmHIP/WEmZ+2U/OFUb9ZbiDPZFz+pHDIY1sCwGLkHihOiEhx0CUXzgkdv0EtqoEeDxX/qS8Xw6LBnzHSWtcLKcAEdfYhZ7VQUYYbWs/es9VchqcW7RBM3hAdA06BPtMyzaOwWv2Qlo=

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { api } from '../api';
 import { useServerData } from '../state/serverDataContext';
@@ -8,8 +8,9 @@ const Home = props => {
   const serverTodos = useServerData(data => {
     return data.todos || [];
   });
-  const [text, setText] = useState('');
-  const [todos, setTodos] = useState(serverTodos);
+  // const [text, setText] = useState('');
+  // const [todos, setTodos] = useState(serverTodos);
+  const todos = serverTodos;
 
   const buttonClick = () => {
     props.history.push({
