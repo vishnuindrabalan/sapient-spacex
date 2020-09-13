@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "NODE_ENV=development node scripts/build.js --mode=development -w",
     "test": "node scripts/test.js",
     "start:prod": "node scripts/startProd.js",
     "lint": "eslint src/**/*.js",
