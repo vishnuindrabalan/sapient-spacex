@@ -53,7 +53,7 @@ const Home = props => {
 
       <ul>
         {todos.map(todo => (
-          <li key={todo.id}>{todo.flight_number}</li>
+          <li key={todo.id}>{todo.text}</li>
         ))}
       </ul>
     </div>
