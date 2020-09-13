@@ -3,6 +3,15 @@ process.env.NODE_ENV = 'development';
 process.env.PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 require('@babel/register')({
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        useBuiltIns: 'entry'
+      },
+      'react'
+    ]
+  ],
   plugins: [
     [
       'css-modules-transform',
