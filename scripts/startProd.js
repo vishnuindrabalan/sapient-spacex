@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
 process.env.PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 const cluster = require('cluster');
@@ -27,9 +27,7 @@ if (cluster.isMaster) {
     }
 
     console.info(
-      `Server running on port ${PORT} -- Worker pid: ${
-        cluster.worker.process.pid
-      }`
+      `Server running on port ${PORT} -- Worker pid: ${cluster.worker.process.pid}`
     );
   });
 }

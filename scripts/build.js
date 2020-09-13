@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
 process.env.PUBLIC_URL = process.env.PUBLIC_URL || '';
 
 const chalk = require('chalk');
